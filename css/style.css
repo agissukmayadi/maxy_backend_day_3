@@ -1,0 +1,560 @@
+:root {
+  --secondary-color: rgb(229, 0, 0);
+  --primary-font: "Bebas Neue", sans-serif;
+  --secondary-font: "Work Sans", sans-serif;
+}
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+nav {
+  font-family: var(--secondary-font);
+  width: 100%;
+  background-color: transparent;
+  position: fixed;
+  transition: background-color 0.3s ease;
+}
+nav.scrolled {
+  background-color: black;
+  z-index: 100;
+}
+
+nav div {
+  display: flex;
+  padding: 20px 20px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav div p {
+  color: white;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+nav div p span {
+  color: var(--secondary-color);
+}
+
+nav div a {
+  background-color: var(--secondary-color);
+  font-weight: bold;
+  padding: 10px 20px;
+  color: white;
+  font-family: var(--secondary-font);
+  border: none;
+  cursor: pointer;
+}
+
+section {
+  padding: 50px 20px;
+  background-color: black;
+  margin-top: -1px;
+  font-family: var(--primary-font);
+}
+
+section#landing {
+  padding: 0;
+}
+
+section#landing {
+  height: 100vh;
+  width: 100%;
+  background-image: url("../img/landing.jpg");
+  background-size: cover;
+  background-position: top;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section#landing div {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  row-gap: 10px;
+  margin: 0px 20px;
+}
+
+section#landing div h1 {
+  font-weight: bolder;
+  font-family: var(--primary-font);
+  font-size: 4rem;
+  letter-spacing: 12px;
+}
+
+section#landing div p {
+  font-family: var(--secondary-font);
+  font-size: 1rem;
+}
+
+section#landing div a {
+  background-color: var(--secondary-color);
+  font-weight: bold;
+  padding: 10px 20px;
+  color: white;
+  font-family: var(--secondary-font);
+  border: none;
+  cursor: pointer;
+}
+
+section#info {
+  font-family: var(--primary-font);
+  text-align: center;
+}
+
+section#info {
+  margin-top: -1px;
+}
+
+section#info h2 {
+  color: white;
+  letter-spacing: 12px;
+  font-size: 3rem;
+}
+
+section#info p {
+  margin-top: 10px;
+  color: var(--secondary-color);
+  font-size: 1.5rem;
+  letter-spacing: 5px;
+  padding: 0px 20px;
+}
+
+section#artist {
+  margin-top: -1px;
+  font-family: var(--primary-font);
+}
+
+h2.title-section {
+  color: white;
+  text-align: center;
+  font-size: 3rem;
+  letter-spacing: 10px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+h2.title-section::after {
+  content: "";
+  margin: auto;
+  display: block;
+  width: 100px;
+  height: 2px;
+  background-color: var(--secondary-color);
+  margin-top: 10px;
+}
+
+section#artist .artist-container {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 20px;
+  padding: 0px 30px;
+  justify-content: center;
+}
+
+section#artist .artist-item {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+section#artist .artist-img {
+  width: 100%;
+  height: auto;
+  transition: all 0.3s ease;
+}
+
+section#artist .artist-img:hover {
+  transform: scale(1.1);
+}
+
+section#artist .artist-name {
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 6px;
+  position: absolute;
+  bottom: 20px;
+  font-size: 2rem;
+  color: white;
+}
+
+section#artist .other-artist {
+  margin: auto;
+  margin-top: 30px;
+  color: white;
+  font-size: 1.2rem;
+  text-align: center;
+  letter-spacing: 10px;
+  line-height: 30px;
+  width: 80%;
+  font-weight: bold;
+}
+
+section#schedule {
+  padding: 50px 0px;
+}
+
+section#schedule .schedule-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+section#schedule .schedule-item {
+  padding: 20px 60px;
+  background-color: #111111;
+  text-align: center;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+section#schedule .schedule-item h3 {
+  color: white;
+}
+
+section#schedule .schedule-item span {
+  color: var(--secondary-color);
+}
+
+section#schedule .schedule-item small {
+  color: #ffffff80;
+  font-size: 1rem;
+  font-family: var(--secondary-font);
+  display: block;
+}
+
+section#schedule .schedule-item:hover {
+  background-color: var(--secondary-color);
+}
+
+section#schedule .schedule-item.active {
+  background-color: var(--secondary-color);
+}
+
+section#schedule .schedule-item:hover h3 {
+  color: white;
+}
+
+section#schedule .schedule-item.active h3 {
+  color: white;
+}
+
+section#schedule .schedule-item:hover span {
+  color: white;
+}
+
+section#schedule .schedule-item.active span {
+  color: white;
+}
+
+section#schedule .schedule-item:hover small {
+  color: white;
+}
+
+section#schedule .schedule-item.active small {
+  color: white;
+}
+
+section#schedule .artist-schedule-container {
+  padding: 50px 0px;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  background-position: top;
+  background-size: cover;
+}
+
+section#schedule .artist-schedule-container.active {
+  background-image: url(../img/schedule/day1.jpg);
+  display: flex;
+}
+
+section#schedule .artist-schedule-item {
+  color: white;
+  border: 5px solid white;
+  padding: 10px 20px;
+  font-size: 1.5rem;
+  letter-spacing: 5px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+section#schedule .artist-schedule-item:hover {
+  background-color: var(--secondary-color);
+}
+
+section#tickets .tickets-container {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  margin: 0px 40px;
+  gap: 20px;
+  color: white;
+}
+
+section#tickets .tickets-item {
+  border: 1px solid white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0px;
+}
+
+section#tickets .tickets-title {
+  font-size: 2.5rem;
+  letter-spacing: 10px;
+  padding: 20px 0px;
+  text-align: center;
+}
+
+section#tickets .tickets-price {
+  display: block;
+  width: 100%;
+  font-size: 3rem;
+  padding: 20px 0px;
+  text-align: center;
+  background-color: var(--secondary-color);
+  transition: all 0.3s ease;
+}
+
+section#tickets .tickets-price:hover {
+  background-color: white;
+  color: var(--secondary-color);
+}
+
+section#tickets .tickets-price small {
+  display: inline-block;
+  font-size: 1.5rem;
+  margin-right: 5px;
+}
+
+section#tickets ul {
+  list-style-type: disc;
+  color: white;
+  font-family: var(--secondary-font);
+  font-size: 1.2rem;
+  padding: 20px 0px;
+}
+
+section#tickets li {
+  margin: 10px 0px;
+}
+
+section#tickets li::marker {
+  color: var(--secondary-color);
+}
+
+section#tickets .tickets-footer {
+  padding: 20px 0px;
+}
+
+section#tickets .tickets-footer a {
+  background-color: var(--secondary-color);
+  font-weight: bold;
+  padding: 10px 20px;
+  color: white;
+  font-family: var(--secondary-font);
+  border: none;
+  cursor: pointer;
+}
+
+section#gallery .gallery-container {
+  padding: 0px 10px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.gallery-item:hover {
+  transform: scale(1.05);
+}
+
+.gallery-item {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 0px;
+  background-color: black;
+  color: white;
+  font-family: var(--secondary-font);
+  border-top: 1px solid rgb(100, 100, 100);
+}
+
+footer span {
+  color: var(--secondary-color);
+}
+
+@media screen and (min-width: 768px) {
+  section#artist .artist-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  section#tickets .tickets-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  nav div {
+    padding: 20px 60px;
+  }
+  section#gallery .gallery-container {
+    padding: 0px 60px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  section#artist .artist-container {
+    margin: 0px 100px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  section#tickets .tickets-container {
+    margin: 0px 200px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  nav div {
+    padding: 20px 100px;
+  }
+  section#gallery .gallery-container {
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    padding: 0px 200px;
+  }
+}

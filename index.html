@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <nav>
+      <div>
+        <p>Rock<span>Fest.</span></p>
+        <a>Buy Ticket</a>
+      </div>
+    </nav>
+    <section id="landing">
+      <div>
+        <h1>The Biggest Music Event of the Year</h1>
+        <p>
+          The biggest music event in decades. Attended by more than 100
+          musicians from all over the world. Get your ticket now!
+        </p>
+        <a>Explore</a>
+      </div>
+    </section>
+
+    <section id="info">
+      <h2>Aug 23-28</h2>
+      <p>Allegiant Stadium, Las Vegas, NV, United States</p>
+    </section>
+
+    <section id="artist">
+      <h2 class="title-section">Artist</h2>
+      <div class="artist-container">
+        <div class="artist-item">
+          <img src="img/artist/featured-1.jpg" class="artist-img" alt="" />
+          <p class="artist-name">Kiss</p>
+        </div>
+        <div class="artist-item">
+          <img src="img/artist/featured-2.jpg" class="artist-img" alt="" />
+          <p class="artist-name">Guns N Roses</p>
+        </div>
+        <div class="artist-item">
+          <img src="img/artist/featured-3.jpg" class="artist-img" alt="" />
+          <p class="artist-name">Pearl Jam</p>
+        </div>
+      </div>
+      <div class="other-artist">
+        Halestorm Chevelle Joan Jett In This Moment The Hives Gojira The
+        Distillers Action Bronson The Struts Refused Killswitch Engage Parkway
+        Drive Beartooth Scars on Broadway Architects Tom Morrelo Avatar Bad
+        Wolves
+      </div>
+    </section>
+    <section id="schedule">
+      <h2 class="title-section">Schedule</h2>
+      <div class="schedule-container">
+        <div class="schedule-item active" data-day="1">
+          <h3>Day <span>01</span></h3>
+          <small>Aug 23, 2023</small>
+        </div>
+        <div class="schedule-item" data-day="2">
+          <h3>Day <span>02</span></h3>
+          <small>Aug 24, 2023</small>
+        </div>
+        <div class="schedule-item" data-day="3">
+          <h3>Day <span>03</span></h3>
+          <small>Aug 25, 2023</small>
+        </div>
+        <div class="schedule-item" data-day="4">
+          <h3>Day <span>04</span></h3>
+          <small>Aug 26, 2023</small>
+        </div>
+        <div class="schedule-item" data-day="5">
+          <h3>Day <span>05</span></h3>
+          <small>Aug 27, 2023</small>
+        </div>
+      </div>
+      <div>
+        <div
+          class="artist-schedule-container active"
+          data-day="1"
+          data-bg-image="url(../img/schedule/day1.jpg)"
+        >
+          <p class="artist-schedule-item">Guns N Roses</p>
+          <p class="artist-schedule-item">The Hives</p>
+          <p class="artist-schedule-item">Gojira</p>
+          <p class="artist-schedule-item">Joan Jett</p>
+          <p class="artist-schedule-item">Action Bronson</p>
+        </div>
+        <div
+          class="artist-schedule-container"
+          data-day="2"
+          data-bg-image="url(../img/schedule/day2.jpg)"
+        >
+          <p class="artist-schedule-item">Kiss</p>
+          <p class="artist-schedule-item">The Distillers</p>
+          <p class="artist-schedule-item">Hale Storm</p>
+          <p class="artist-schedule-item">Chevelle</p>
+          <p class="artist-schedule-item">In This Moment</p>
+        </div>
+        <div
+          class="artist-schedule-container"
+          data-day="3"
+          data-bg-image="url(../img/schedule/day3.jpg)"
+        >
+          <p class="artist-schedule-item">Pearl Jam</p>
+          <p class="artist-schedule-item">Killswitch Engage</p>
+          <p class="artist-schedule-item">The Struts</p>
+          <p class="artist-schedule-item">Refused</p>
+          <p class="artist-schedule-item">Parkway Drive</p>
+        </div>
+        <div
+          class="artist-schedule-container"
+          data-day="4"
+          data-bg-image="url(../img/schedule/day4.jpg)"
+        >
+          <p class="artist-schedule-item">Guns N Roses</p>
+          <p class="artist-schedule-item">Beartooth</p>
+          <p class="artist-schedule-item">Scars On Broadway</p>
+          <p class="artist-schedule-item">Architects</p>
+          <p class="artist-schedule-item">The Morrelo</p>
+        </div>
+        <div
+          class="artist-schedule-container"
+          data-day="5"
+          data-bg-image="url(../img/schedule/day5.jpg)"
+        >
+          <p class="artist-schedule-item">Kiss</p>
+          <p class="artist-schedule-item">Pearl Jam</p>
+          <p class="artist-schedule-item">Guns N Roses</p>
+          <p class="artist-schedule-item">Avatar</p>
+          <p class="artist-schedule-item">Bad Wolves</p>
+        </div>
+      </div>
+    </section>
+    <section id="tickets">
+      <h2 class="title-section">Tickets</h2>
+      <div class="tickets-container">
+        <div class="tickets-item">
+          <h1 class="tickets-title">One-Day</h1>
+          <p class="tickets-price"><small>$</small>49.99</p>
+          <ul class="tickets-benefit">
+            <li>One Day Pass</li>
+            <li>Chance to win doorprize</li>
+            <li><s>Free official merchandise</s></li>
+            <li><s>Free artist photo + signature</s></li>
+            <li><s>Hotel Voucher</s></li>
+          </ul>
+          <div class="tickets-footer">
+            <a>Buy Ticket</a>
+          </div>
+        </div>
+        <div class="tickets-item">
+          <h1 class="tickets-title">Three-Day</h1>
+          <p class="tickets-price"><small>$</small>69.99</p>
+          <ul class="tickets-benefit">
+            <li>One Day Pass</li>
+            <li>Chance to win doorprize</li>
+            <li>Free official merchandise</li>
+            <li><s>Free artist photo + signature</s></li>
+            <li><s>Hotel Voucher</s></li>
+          </ul>
+          <div class="tickets-footer">
+            <a>Buy Ticket</a>
+          </div>
+        </div>
+        <div class="tickets-item">
+          <h1 class="tickets-title">One-Day</h1>
+          <p class="tickets-price"><small>$</small>89.99</p>
+          <ul class="tickets-benefit">
+            <li>One Day Pass</li>
+            <li>Chance to win doorprize</li>
+            <li>Free official merchandise</li>
+            <li>Free artist photo + signature</li>
+            <li>Hotel Voucher</li>
+          </ul>
+          <div class="tickets-footer">
+            <a>Buy Ticket</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="gallery">
+      <h2 class="title-section">Gallery</h2>
+      <div class="gallery-container">
+          <img src="img/gallery/1.jpg" class="gallery-item" />
+          <img src="img/gallery/2.jpg" class="gallery-item" />
+          <img src="img/gallery/3.jpg" class="gallery-item" />
+          <img src="img/gallery/4.jpg" class="gallery-item" />
+          <img src="img/gallery/5.jpg" class="gallery-item" />
+          <img src="img/gallery/6.jpg" class="gallery-item" />
+        </div>
+      </div>
+    </section>
+    <footer>
+        © Copyright 2024 - Rockfest by <span>Agis Sukmayadi</span>
+    </footer>
+    <script>
+      window.addEventListener("scroll", function () {
+        const nav = document.querySelector("nav");
+        if (window.scrollY > 50) {
+          // Jika halaman discroll lebih dari 50px
+          nav.classList.add("scrolled");
+        } else {
+          nav.classList.remove("scrolled");
+        }
+      });
+
+      const scheduleItems = document.querySelectorAll(".schedule-item");
+      const artistScheduleContainers = document.querySelectorAll(
+        ".artist-schedule-container"
+      );
+
+      scheduleItems.forEach((item) => {
+        item.addEventListener("click", function () {
+          scheduleItems.forEach((item) => {
+            item.classList.remove("active");
+          });
+          this.classList.add("active");
+
+          artistScheduleContainers.forEach((container) => {
+            container.classList.remove("active");
+            if (container.dataset.day == this.dataset.day) {
+              container.classList.add("active");
+              container.style.backgroundImage =
+                container.getAttribute("data-bg-image");
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
